@@ -68,7 +68,7 @@ public class AttendanceserverController implements IReceivedataCallBackListener 
     }
 
     @Override
-    public void obtainConnection(){
+    public void obtainConnection(){//重新获取客户端连接
         Socket socket = null;
         try {
             socket = serverSocket.accept();
