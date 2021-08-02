@@ -38,14 +38,15 @@ public class TimeConsts {
         clockInOffTime = cal.getTime();
 
         Calendar cal2 = Calendar.getInstance();//更新考勤记录的时间
-        cal2.set(Calendar.HOUR_OF_DAY, 23);
-        cal2.set(Calendar.MINUTE, 13);
-        cal2.set(Calendar.SECOND, 40);
+        cal2.set(Calendar.HOUR_OF_DAY, 00);
+        cal2.set(Calendar.MINUTE, 01);
+        cal2.set(Calendar.SECOND, 02);
         firstTime = cal2.getTime();
 
         Calendar cal3 = Calendar.getInstance();
 //            cal.set(Calendar.HOUR_OF_DAY,24);
-        cal3.set(Calendar.HOUR_OF_DAY, 24);
+//        cal3.set(Calendar.HOUR_OF_DAY, 24);
+        cal3.set(Calendar.SECOND,20);
         delay = cal3.getTime().getTime();
 
     }
