@@ -37,8 +37,8 @@ public class TimeConsts {
         cal.set(Calendar.HOUR_OF_DAY, 18);
         clockInOffTime = cal.getTime();
 
-        Calendar cal2 = Calendar.getInstance();
-        cal2.set(Calendar.HOUR_OF_DAY, 03);
+        Calendar cal2 = Calendar.getInstance();//更新考勤记录的时间
+        cal2.set(Calendar.HOUR_OF_DAY, 23);
         cal2.set(Calendar.MINUTE, 13);
         cal2.set(Calendar.SECOND, 40);
         firstTime = cal2.getTime();

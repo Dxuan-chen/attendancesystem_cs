@@ -40,7 +40,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
         Date clockInTime = new Date();
 
         boolean flag = (boolean)workDateDao.findWorkDate(new java.sql.Date(clockInTime.getTime()));//查询工作日
-        if(flag == false){//不是工作日
+        if(!flag){//不是工作日
 
             return ResponseStatus.CLOCK_IN_NOWORKDAY;
         }else {
@@ -51,7 +51,6 @@ public class EmployeeServiceImpl implements IEmployeeService {
             clockInfo.setClockDate(new java.sql.Date(clockInTime.getTime()));
             Object findClock = clockInfoDao.findClockInfoByClock(clockInfo);
             if (findClock != null) {//重复上班打卡
-//            return findClock;
                 return ResponseStatus.CLOCK_IN_REPEAT;
             }
             int count = (int)clockInfoDao.updateClockInfoIn(clockInfo);
@@ -69,7 +68,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
         Date clockInTime = new Date();
 
         boolean flag = (boolean)workDateDao.findWorkDate(new java.sql.Date(clockInTime.getTime()));//查询工作日
-        if(flag == false){//不是工作日
+        if(!flag){//不是工作日
             return ResponseStatus.CLOCK_OFF_NOWORKDAY;
         }else {
 
