@@ -183,7 +183,7 @@ public class AttendanceClientView implements IReceivedataCallBackListener {
                 }else if(valuesList.size()!=0&&valuesList!=null&&valuesList.get(0) instanceof AttendanceStatusVo){
                     List<AttendanceStatusVo> asVoList = (List<AttendanceStatusVo>) v;
                     if (asVoList != null && asVoList.size() != 0) {
-                        System.out.println("员工编号  员工名  考勤年月  迟到  早退  正常  矿工");
+                        System.out.println("员工编号  员工名  考勤年月  迟到  早退  正常  旷工");
                         for (AttendanceStatusVo asVo : asVoList) {
                             System.out.println("-----------------------------------------------");
                             System.out.print(asVo.getEmployeeNo()+'\t');
